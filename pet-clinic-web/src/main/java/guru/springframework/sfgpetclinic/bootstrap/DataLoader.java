@@ -4,8 +4,7 @@ import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.sfgpetclinic.services.VetService;
-import guru.springframework.sfgpetclinic.services.map.OwnerServiceMap;
-import guru.springframework.sfgpetclinic.services.map.VetServiceMap;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 // ways to intialize data
@@ -16,10 +15,16 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    @Autowired // need not required to mention
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
+
+    //    public DataLoader() {
+//        ownerService = new OwnerServiceMap();
+//        vetService = new VetServiceMap();
+//    }
 
     // when spring context is up, it will run this method
     @Override
