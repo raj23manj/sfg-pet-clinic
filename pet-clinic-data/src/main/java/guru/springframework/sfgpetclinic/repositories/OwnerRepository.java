@@ -1,7 +1,8 @@
 package guru.springframework.sfgpetclinic.repositories;
 
 import guru.springframework.sfgpetclinic.model.Owner;
-import guru.springframework.sfgpetclinic.services.CrudServices;
+import org.springframework.data.repository.CrudRepository;
 
-public interface OwnerRepository extends CrudServices<Owner, Long> {
+public interface OwnerRepository extends CrudRepository<Owner, Long> {
+    Owner findByLastName(String lastName);
 }
