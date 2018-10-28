@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /*
 * tells JPA that it is a super class for other classes
-* not to map it to db tables
+* not to map and create to db tables
 * */
 @MappedSuperclass
 public class BaseEntity implements Serializable {
