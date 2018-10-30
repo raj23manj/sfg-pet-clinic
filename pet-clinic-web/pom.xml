@@ -155,14 +155,14 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.0</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-surefire-provider</artifactId>
-                        <!-- this will inherit from parent pom -->
-                        <version>${junit-platform.version}</version>
-                    </dependency>
-                </dependencies>
+                <!--<dependencies>-->
+                    <!--<dependency>-->
+                        <!--<groupId>org.junit.platform</groupId>-->
+                        <!--<artifactId>junit-platform-surefire-provider</artifactId>-->
+                        <!--&lt;!&ndash; this will inherit from parent pom &ndash;&gt;-->
+                        <!--<version>${junit-platform.version}</version>-->
+                    <!--</dependency>-->
+                <!--</dependencies>-->
             </plugin>
 
             <!--<plugin>-->
